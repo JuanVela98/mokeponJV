@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>MOKEPON</title>
+        <link rel="stylesheet" href="./styles.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    </head>
+    <body>
+        <section id="Seleccionar-mascota">
+            <h1 class="titulo" style="margin-bottom: 4px;margin-top: 4px">MOKEPON </h1>
+            <h2 class="sub-titulo" style="margin-bottom: 4px;margin-top: 10px">SELECT YOUR PET</Select></h2>
+
+            <div id= "contenero-tarjetas" class="tarjetas"> 
+            </div>  
+
+            <button class="boton" id="boton-mascota" style="margin-top: 25px">SELECT</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h1 class="sub-titulo" style="margin-bottom: 4px;margin-top: 4px">RECORRE EL MAPA CON TU MOKEPON </h1>
+            <canvas id="mapa"></canvas>
+
+            <button class="boton-DI" ontouchstart="moverUp()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverUp()"><img src='./assets/uparrow.png' alt='Up'></button>
+            <div>
+                <button class="boton-DI" ontouchstart="moverLeft()" ontouchend="detenerMovimiento()"  onmouseup="detenerMovimiento()" onmousedown="moverLeft()"><img src='./assets/leftarrow.png' alt='Left'></button>
+                <button class="boton-DI" ontouchstart="moverDown()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverDown()"><img src='./assets/downarrow.png' alt='Down'></button>
+                <button class="boton-DI" ontouchstart="moverRight()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverRight()"><img src='./assets/rightarrow.png' alt='Right'></button> 
+            </div>
+        </section>
+       
+        <section id="seleccionar-ataque">
+            <h1 class="titulo" style="margin-bottom: 4px;margin-top: 4px">MOKEPON </h1>
+            <h2 class="sub-titulo" >Choose your power</h2>
+
+            <div class="boton-poder" id="contenedor-boton-poderes">
+            </div>
+
+            <div>
+                <section class="sub-titulo">
+                    <p ><span id ="mensaje-final"> PLAY GAME</span></p>
+                </section>
+
+                <section id="Reiniciar">
+                    <button id="boton-reiniciar" class="boton-reinicia">RESTART</button>
+                </section>
+            </div>
+
+            <div id="mensaje-pelea">
+                <div id="ganadas-Mensajes">
+                    <p class="ganadas">🙋‍♂️</p>
+                    <p class="ganadas">🤺<span id ="ganadas-jugador"> 0</span></p>
+                    <p class="mascota"><span id="mascota-jugador"></span></p>
+                    <div id="mensaje-jugador"></div>
+                </div>
+
+                <div id="ganadas-Mensajes">
+                    <p class="ganadas">🧑‍💻</p>  
+                    <p class="ganadas">🤺<span id ="ganadas-enemigo"> 0</span></p>   
+                    <p class="mascota"><span id="mascota-enemigo"></span></p>
+                    <div id="mensaje-enemigo"></div>  
+                </div>
+            </div>               
+        </section>  
+    <script src="./mokepon.js"></script>     
+    </body>
+</html>

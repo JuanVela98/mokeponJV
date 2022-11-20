@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+:root{
+    --Coloruno: #06283D;
+    --Colordos:#a66cff5c;
+    --Colortres:#a66cff;
+    --letra: 'Silkscreen', cursive;
+    --difuminasionFondo:2px 0px 12px;
+}
+body{
+    background-color: var(--Coloruno);
+    font-family: var(--letra);
+    user-select: none;
+}
+.titulo {
+    color: var(--Colortres);
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+}
+.sub-titulo{
+    color: var(--Colortres);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+#ver-mapa{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    gap: 30px;
+}
+.tarjeta-de-mokepon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--Colortres);
+    margin: 25px;
+    height: 200px;
+    width: 150px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: var(--difuminasionFondo);
+}
+.tarjeta-de-mokepon img{
+    width: 100px;
+}
+
+.tarjeta-de-mokepon img:hover{
+    width: 130px;
+}
+.tarjeta-de-mokepon:hover{
+    background-color: var(--Colordos);
+}
+
+input:checked+ label {
+    background-color: var(--Colordos);
+
+}
+
+input{
+    display: none;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 160px;
+    height: 50px;
+    background-color: transparent; 
+    color: var(--Colortres);
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--letra);
+    box-shadow: var(--difuminasionFondo);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.boton:hover{
+    background-color: var(--Colordos);
+}
+
+.boton-DI{
+    width: 100px;
+    height: 70px;
+    color: var(--Colortres);
+    background-color: transparent; 
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.boton-DI img{
+    width: 80%;
+}
+.boton-DI img:hover{
+    width: 100%;
+}
+
+
+
+#seleccionar-ataque{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.boton-poder{
+    display: flex;
+    width: 600px;
+    gap: 30px;
+}
+
+.boton-reinicia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    width: 160px;
+    height: 50px;
+    background-color: transparent; 
+    color: var(--Colortres);
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--letra);
+    box-shadow: var(--difuminasionFondo);
+    margin-top: 20px;
+}
+.boton-reinicia:hover{
+    background-color: var(--Colordos);
+}
+#ganadas-Mensajes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--difuminasionFondo);
+    color: var(--Colortres);
+    margin-top: 30px;
+    width: 160px;
+}
+.ganadas{
+    font-size: 60px;
+    margin: 1px 1px 1px 1px;
+}
+.mascota{
+    font-size: 25px;
+    margin: 1px 1px 1px 1px;
+}
+
+#mensaje-pelea{
+   display: grid; 
+   grid-template-columns: 200px 200px;
+   justify-items: center;
+} 
+
+@media (max-width:600px){
+    #tarjetas{
+        flex-direction: column;
+    }
+
+    .titulo {
+        font-size: 60px;
+    }
+
+    .sub-titulo{
+        font-size: 25px;
+    }
+
+    #ganadas-Mensajes {
+        width: 140px;
+    }
+    .mascota {
+        font-size: 20px;
+    }
+    .ganadas {
+        font-size: 34px;
+    }   
+
+    .boton-poder{
+    display: flex;
+    flex-wrap: wrap;
+    width: 360px;
+    gap: 30px;
+    }
+    .boton-DI{
+        width: 80px;
+        height: 60px;
+    }
+
+}
+@media (max-width:450px){
+    .tarjetas{
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+    .tarjeta-de-mokepon {
+        margin: 9px;
+        height: 177px;
+        width: 150px; 
+    }
+    .boton-poder {
+        gap: 10px;
+    }
+    .boton {
+        width: 100px;
+    }
+    #mensaje-pelea {
+        grid-template-columns: 150px 150px;
+    }
+}
